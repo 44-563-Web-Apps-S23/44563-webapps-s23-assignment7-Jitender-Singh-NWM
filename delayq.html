@@ -80,14 +80,11 @@
 		/* make the div and its text */
         var queueItems=document.getElementsByClassName("delayQ");
         var removedId;
-       // const list = document.getElementById("delayQ");
-//list.insertBefore(newNode, list.children[0]);
-
 		if(queueItems.length!=0 ||queueItems.length!=1){
             removedId=queueItems[0];
             queueItems[0].remove();
             let container = document.getElementById('target');
-		container.insertBefore(removedId,container.lastChild);
+		container.appendChild(removedId);
         }
 		
 	}
