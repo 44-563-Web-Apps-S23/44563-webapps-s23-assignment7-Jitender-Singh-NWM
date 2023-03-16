@@ -49,6 +49,7 @@
 		<button class="btn btn-dark" onclick="makeNewDiv()">Add value</button>
         <button class="btn btn-primary" onclick="get()">Get</button>
         <button class="btn btn-info" onclick="delay()">Delay</button>
+        <button class="btn btn-info" onclick="promote()">Promote</button>
 	
 	
 </body>
@@ -88,5 +89,15 @@
         }
 		
 	}
+    function promote(){
+        var queueItems = document.getElementsByClassName("delayQ")
+        
+        var rand = Math.floor(Math.random()*queueItems.length);
+        
+        var removedItem = queueItems[rand];
+        queueItems[rand].remove();
+        let container = document.getElementById('target');
+        container.insertBefore(removedItem, container.firstChild);
+    }
 </script>
 </html>	

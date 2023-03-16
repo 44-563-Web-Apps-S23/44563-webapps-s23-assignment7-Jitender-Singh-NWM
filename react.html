@@ -26,10 +26,17 @@
     console.log(reactTime);
   }
   function startTime() { 
-    for (let i = 0; i < 9; i++) {
+    
+const min = parseInt(2);
+const max = parseInt(10);
+
+// generating a random number
+var countVal = Math.floor(Math.random() * (max - min + 1)) + min;
+    
+    for (let i = 0; i < countVal+1; i++) {
         setTimeout ( function () { 
             document.getElementById("counter").innerHTML = "Count " + i   
-        }, (8 - i) * 1000) 
+        }, (countVal - i) * 1000) 
     }
     setTimeout ( function () {
         if (reactTime == undefined) {
