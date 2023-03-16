@@ -92,10 +92,10 @@
     function promote(){
         var queueItems = document.getElementsByClassName("delayQ")
         
-        var rand = Math.floor(Math.random()*queueItems.length);
+        var randomval = Math.floor(Math.random()*queueItems.length);
         
-        var removedItem = queueItems[rand];
-        queueItems[rand].remove();
+        var removedItem = queueItems[randomval];
+        queueItems[randomval].remove();
         let container = document.getElementById('target');
         container.insertBefore(removedItem, container.firstChild);
     }
